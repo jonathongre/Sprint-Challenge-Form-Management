@@ -6,7 +6,7 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <div className="App gradDynamic">
         <h1>Sign In</h1>
         <FormikForm />
       </div>
