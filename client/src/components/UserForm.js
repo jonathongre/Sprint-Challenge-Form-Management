@@ -33,10 +33,12 @@ function UserForm({ errors, touched, status }) {
       {recipes
         ? recipes.map(recipe => (
             <div key={Date.now() + Math.random(10000)} className="recipes">
+              <div className='recipeTitle'>
               <h2>Name: {recipe.name}</h2>
               <h3>Course: {recipe.course}</h3>
               <h3>Technique: {recipe.technique}</h3>
-              <h3>Ingredients: {recipe.ingredients}</h3>
+              </div>
+              <h4>Ingredients: {recipe.ingredients}</h4>
                 </div>
               ))
             : null}
@@ -68,7 +70,7 @@ function UserForm({ errors, touched, status }) {
             password: values.password
           })
           .then(response => {
-            console.log(response.data);
+            console.log(response);
           })
           .catch(function(error) {
             console.log(error);
@@ -87,3 +89,5 @@ function UserForm({ errors, touched, status }) {
     })(UserForm);
     
     export default FormikForm;
+
+    export const add = (num1, num2) => num1 + num2;
